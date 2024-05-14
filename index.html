@@ -11,6 +11,9 @@
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background-color: #3eb489; /* Mint green */
@@ -32,6 +35,7 @@
             cursor: pointer;
         }
         .container {
+            flex: 1;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
@@ -49,17 +53,48 @@
         .portfolio-item, .blog-post {
             margin-bottom: 1.5rem;
         }
+        .portfolio-item img, .blog-post img, .header-image, #about img {
+            width: 100%;
+            height: auto;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .headshot {
+            max-width: 200px;
+            border-radius: 50%;
+            display: block;
+            margin: 1rem auto;
+        }
         footer {
             background-color: #3eb489;
             color: white;
             text-align: center;
             padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Marcel Perez</h1>
+        <img src="images/header.jpg" alt="Header Image" class="header-image">
         <p>Filmmaker and Producer</p>
     </header>
     <nav>
@@ -70,6 +105,7 @@
     <div class="container">
         <section id="about" class="section active">
             <h2>About Me</h2>
+            <img src="images/headshot.jpg" alt="Marcel Perez" class="headshot">
             <p>Hello! I'm Marcel Perez, a filmmaker and producer with a passion for storytelling and bringing unique visions to life. With a background in mechanical engineering and a love for filmmaking, I've produced feature films that have been showcased at major festivals and secured distribution deals. I'm currently working on a new feature film and exploring animated projects. Welcome to my personal webpage!</p>
         </section>
         <section id="portfolio" class="section">
