@@ -83,9 +83,12 @@
         .section {
             display: none;
         }
-        .section.active .container {
+        .section:target .container {
             opacity: 1;
             transform: translateY(0);
+        }
+        .section:target {
+            display: block;
         }
         h2 {
             color: #ff6f61;
@@ -159,12 +162,12 @@
         <p>Filmmaker and Producer</p>
     </header>
     <nav>
-        <a href="#" onclick="showSection('about')">About Me</a>
-        <a href="#" onclick="showSection('portfolio')">Portfolio</a>
-        <a href="#" onclick="showSection('blog')">Blog</a>
+        <a href="#about">About Me</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#blog">Blog</a>
     </nav>
     <main>
-        <section id="about" class="section active">
+        <section id="about" class="section">
             <div class="container">
                 <h2>About Me</h2>
                 <div class="headshot-container">
@@ -218,24 +221,5 @@
         </div>
         <p>&copy; 2024 Marcel Perez. All rights reserved.</p>
     </footer>
-    <script>
-        function showSection(sectionId) {
-            console.log('Showing section:', sectionId);
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
-
-        window.addEventListener('scroll', function() {
-            const containers = document.querySelectorAll('.container');
-            containers.forEach(container => {
-                const rect = container.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    container.parentElement.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
