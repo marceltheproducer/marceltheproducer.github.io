@@ -23,10 +23,8 @@
             color: white;
             text-align: center;
             padding: 5rem 1rem;
-            position: fixed;
+            position: relative;
             width: 100%;
-            top: 0;
-            z-index: 1000;
         }
         header::before {
             content: '';
@@ -47,10 +45,10 @@
             justify-content: center;
             background-color: #ff6f61;
             padding: 0.5rem 0;
-            position: fixed;
+            position: relative;
             width: 100%;
-            top: 10rem;
-            z-index: 1000;
+            bottom: 0;
+            z-index: 2;
         }
         nav a {
             color: white;
@@ -65,7 +63,7 @@
         }
         main {
             flex: 1;
-            padding-top: 15rem;
+            padding-top: 2rem;
             padding-bottom: 2rem;
             width: 100%;
             max-width: 1200px;
@@ -103,7 +101,7 @@
         .headshot-container {
             width: 100%;
             max-width: 300px;
-            margin: 0 auto;
+            margin: 1rem auto;
             position: relative;
             padding-bottom: 75%;
         }
@@ -116,7 +114,7 @@
         }
         .description {
             text-align: center;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
         footer {
             background-color: #ff6f61;
@@ -148,13 +146,12 @@
             }
             nav {
                 flex-direction: column;
-                top: 8rem;
             }
             nav a {
                 margin: 0.5rem 0;
             }
             main {
-                padding-top: 20rem;
+                padding-top: 2rem;
                 padding-bottom: 2rem;
             }
             .container {
@@ -166,10 +163,10 @@
                 padding: 2rem 1rem;
             }
             nav {
-                top: 7rem;
+                bottom: 0;
             }
             main {
-                padding-top: 18rem;
+                padding-top: 2rem;
                 padding-bottom: 2rem;
             }
             .headshot-container {
@@ -185,11 +182,11 @@
     <header>
         <h1>Marcel Perez</h1>
         <p>Filmmaker and Producer</p>
+        <nav>
+            <a href="#about" onclick="showSection('about')">About Me</a>
+            <a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#about" onclick="showSection('about')">About Me</a>
-        <a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a>
-    </nav>
     <main>
         <section id="about" class="section default">
             <div class="container">
