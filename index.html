@@ -217,6 +217,7 @@
     </footer>
     <script>
         function showSection(sectionId) {
+            console.log('Showing section:', sectionId);
             document.querySelectorAll('.section').forEach(section => {
                 section.classList.remove('active');
             });
