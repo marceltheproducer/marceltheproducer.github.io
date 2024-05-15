@@ -86,10 +86,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
         }
         .about img {
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
@@ -109,6 +110,39 @@
             width: 100%;
             border-radius: 8px;
             margin-bottom: 1rem;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-form form {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .contact-form form input,
+        .contact-form form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form form button {
+            padding: 0.75rem 1.5rem;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form form button:hover {
+            background-color: #ff5733;
         }
         footer {
             background-color: #ff6f61;
@@ -169,12 +203,7 @@
         <section id="about" class="about section default">
             <h2>About Me</h2>
             <img src="images/headshot.jpg" alt="Marcel Perez">
-            <p>Marcel is a GLAAD Media and Spirit Award-nominated film producer from Miami, FL, and a 1st generation Cuban-Peruvian American. His work primarily focuses on representation and minority storytelling, putting women, BIPOC, and LGBTQIA folks at the forefront of media.
-
-His last feature ‘La Leyenda Negra’ was an Official Selection at the 2020 Sundance Film Festival, OutFest LA, BFI Flare, IndieLisboa, and Festival MIX Milano and previously streamed on HBO Max/HBO Latino. Other features include: ‘The Way You Look Tonight’ (distributed by Gravitas Ventures, Nominated for Best Feature at Cinequest Film Festival, Recipient of Peach Award at Atlanta Film Festival), and ‘I Before Thee’ (distributed by Bridgestone Multimedia). Marcel’s short documentary project, ‘Postcolonial Piñata’ won the 2022 BlackStar Pitch competition receiving an artist grant and support from Warner Bros Discovery’s OneFifty.
-
-In his spare time, Marcel enjoys brewing Cuban coffee, performing improv, and producing the comedy podcast Witch, Yes!
-</p>
+            <p>Marcel is a GLAAD Media and Spirit Award-nominated film producer from Miami, FL, and a 1st generation Cuban-Peruvian American. His work primarily focuses on representation and minority storytelling, putting women, BIPOC, and LGBTQIA folks at the forefront of media. His last feature ‘La Leyenda Negra’ was an Official Selection at the 2020 Sundance Film Festival, OutFest LA, BFI Flare, IndieLisboa, and Festival MIX Milano and previously streamed on HBO Max/HBO Latino. Other features include: ‘The Way You Look Tonight’ (distributed by Gravitas Ventures, Nominated for Best Feature at Cinequest Film Festival, Recipient of Peach Award at Atlanta Film Festival), and ‘I Before Thee’ (distributed by Bridgestone Multimedia). Marcel’s short documentary project, ‘Postcolonial Piñata’ won the 2022 BlackStar Pitch competition receiving an artist grant and support from Warner Bros Discovery’s OneFifty. In his spare time, Marcel enjoys brewing Cuban coffee, performing improv, and producing the comedy podcast Witch, Yes!</p>
         </section>
         <section id="portfolio" class="portfolio section">
             <h2>Portfolio</h2>
@@ -192,20 +221,28 @@ In his spare time, Marcel enjoys brewing Cuban coffee, performing improv, and pr
         </section>
         <section id="contact" class="contact section">
             <h2>Contact</h2>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/heymarcelperez/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/marcelperezproducer/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.imdb.com/name/nm6511032/" target="_blank">
-                    <i class="fab fa-imdb"></i>
-                </a>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="_replyto" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
             </div>
         </section>
     </main>
     <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/heymarcelperez/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/marcelperezproducer/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.imdb.com/name/nm6511032/" target="_blank">
+                <i class="fab fa-imdb"></i>
+            </a>
+        </div>
         <p>&copy; 2024 Marcel Perez. All rights reserved.</p>
     </footer>
     <script>
