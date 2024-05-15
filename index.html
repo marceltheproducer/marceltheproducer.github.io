@@ -3,241 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcel Perez - Filmmaker and Producer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            overflow: hidden;
-        }
-        header {
-            background: url('images/header.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 5rem 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-        header h1, header p {
-            position: relative;
-            z-index: 2;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #ff6f61;
-            padding: 0.5rem 0;
-            position: fixed;
-            width: 100%;
-            top: 10rem;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffecd1;
-        }
-        main {
-            flex: 1;
-            padding-top: 15rem;
-            padding-bottom: 2rem;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: auto;
-        }
-        .container {
-            width: 100%;
-            padding: 2rem;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s, transform 0.6s;
-        }
-        .section {
-            display: none;
-        }
-        .section:target .container, .section.default .container {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .section:target, .section.default {
-            display: block;
-        }
-        h2 {
-            color: #ff6f61;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        .portfolio-item, .blog-post {
-            margin-bottom: 1.5rem;
-        }
-        .portfolio-item img, .blog-post img, .header-image, #about img {
-            width: 100%;
-            height: auto;
-        }
-        .headshot-container {
-            width: 100%;
-            max-width: 300px;
-            margin: 1rem auto;
-            position: relative;
-            padding-bottom: 75%;
-        }
-        .headshot {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        .description {
-            text-align: center;
-            margin-top: 1rem;
-        }
-        footer {
-            background-color: #ff6f61;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            padding: 1rem 0;
-        }
-        .social-icons a {
-            margin: 0 0.5rem;
-            color: white;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #ffecd1;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            nav {
-                flex-direction: column;
-            }
-            nav a {
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
+    <title>Marcel's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Marcel Perez</h1>
-        <p>Filmmaker and Producer</p>
+        <nav>
+            <ul>
+                <li><a href="#about-me" id="about-me-link">About Me</a></li>
+                <li><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
+                <li><a href="#blog" id="blog-link">Blog</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#blog">Blog</a>
-    </nav>
     <main>
-        <section id="about" class="section default">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="headshot-container">
-                    <img src="images/headshot.jpg" alt="Marcel Perez" class="headshot">
-                </div>
-                <p class="description">
-                    Hello! I'm Marcel Perez, a filmmaker and producer with a passion for storytelling and bringing unique visions to life. With a background in mechanical engineering and a love for filmmaking, I've produced feature films that have been showcased at major festivals and secured distribution deals. I'm currently working on a new feature film and exploring animated projects. Welcome to my personal webpage!
-                </p>
-            </div>
+        <section id="about-me">
+            <h1>About Me</h1>
+            <p>Hello! I'm Marcel Perez, a filmmaker and producer with a passion for storytelling and bringing unique visions to life. With a background in mechanical engineering and a love for filmmaking, I've produced feature films that have been showcased at major festivals and secured distribution deals. I'm currently working on a new feature film and exploring animated projects. Welcome to my personal webpage!</p>
         </section>
-        <section id="portfolio" class="section">
-            <div class="container">
-                <h2>Portfolio</h2>
-                <div class="portfolio-item">
-                    <h3>Project Title 1</h3>
-                    <p>Description of the project. This is a placeholder for your portfolio items. Include images and details about your work.</p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Project Title 2</h3>
-                    <p>Description of the project. This is a placeholder for your portfolio items. Include images and details about your work.</p>
-                </div>
-            </div>
+        <section id="portfolio">
+            <h1>Portfolio</h1>
+            <!-- Portfolio content goes here -->
         </section>
-        <section id="blog" class="section">
-            <div class="container">
-                <h2>Blog</h2>
-                <div class="blog-post">
-                    <h3>Blog Post Title 1</h3>
-                    <p>Excerpt from the blog post. This is a placeholder for your blog content. Share insights, updates, and articles related to filmmaking and production.</p>
-                    <a href="#">Read more</a>
-                </div>
-                <div class="blog-post">
-                    <h3>Blog Post Title 2</h3>
-                    <p>Excerpt from the blog post. This is a placeholder for your blog content. Share insights, updates, and articles related to filmmaking and production.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
+        <section id="blog">
+            <h1>Blog</h1>
+            <!-- Blog content goes here -->
         </section>
     </main>
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/heymarcelperez/" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/marcelperezproducer/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.imdb.com/name/nm6511032/" target="_blank">
-                <i class="fab fa-imdb"></i>
-            </a>
-        </div>
-        <p>&copy; 2024 Marcel Perez. All rights reserved.</p>
-    </footer>
-    <script>
-        function adjustLayout() {
-            const main = document.querySelector('main');
-            const header = document.querySelector('header');
-            const footer = document.querySelector('footer');
-            const windowHeight = window.innerHeight;
-            const headerHeight = header.offsetHeight;
-            const footerHeight = footer.offsetHeight;
-
-            main.style.height = `${windowHeight - headerHeight - footerHeight}px`;
-        }
-
-        window.addEventListener('resize', adjustLayout);
-        window.addEventListener('load', adjustLayout);
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
