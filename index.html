@@ -143,14 +143,34 @@
             color: #ffecd1;
         }
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
+            header {
+                padding: 3rem 1rem;
             }
             nav {
                 flex-direction: column;
+                top: 8rem;
             }
             nav a {
                 margin: 0.5rem 0;
+            }
+            main {
+                padding-top: 20rem;
+                padding-bottom: 2rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            nav {
+                top: 7rem;
+            }
+            main {
+                padding-top: 18rem;
+                padding-bottom: 2rem;
             }
         }
     </style>
@@ -220,20 +240,5 @@
         </div>
         <p>&copy; 2024 Marcel Perez. All rights reserved.</p>
     </footer>
-    <script>
-        function adjustLayout() {
-            const main = document.querySelector('main');
-            const header = document.querySelector('header');
-            const footer = document.querySelector('footer');
-            const windowHeight = window.innerHeight;
-            const headerHeight = header.offsetHeight;
-            const footerHeight = footer.offsetHeight;
-
-            main.style.height = `${windowHeight - headerHeight - footerHeight}px`;
-        }
-
-        window.addEventListener('resize', adjustLayout);
-        window.addEventListener('load', adjustLayout);
-    </script>
 </body>
 </html>
