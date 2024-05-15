@@ -93,17 +93,17 @@
             text-align: center;
             margin-bottom: 1rem;
         }
-        .portfolio-item, .blog-post {
+        .portfolio-item {
             margin-bottom: 1.5rem;
         }
-        .portfolio-item img, .blog-post img, .header-image, #about img {
+        .portfolio-item img, .header-image, #about img {
             width: 100%;
             height: auto;
         }
         .headshot-container {
             width: 100%;
             max-width: 300px;
-            margin: 1rem auto;
+            margin: 0.5rem auto;
             position: relative;
             padding-bottom: 75%;
         }
@@ -116,7 +116,7 @@
         }
         .description {
             text-align: center;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
         footer {
             background-color: #ff6f61;
@@ -181,9 +181,8 @@
         <p>Filmmaker and Producer</p>
     </header>
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#blog">Blog</a>
+        <a href="#about" onclick="showSection('about')">About Me</a>
+        <a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a>
     </nav>
     <main>
         <section id="about" class="section default">
@@ -210,21 +209,6 @@
                 </div>
             </div>
         </section>
-        <section id="blog" class="section">
-            <div class="container">
-                <h2>Blog</h2>
-                <div class="blog-post">
-                    <h3>Blog Post Title 1</h3>
-                    <p>Excerpt from the blog post. This is a placeholder for your blog content. Share insights, updates, and articles related to filmmaking and production.</p>
-                    <a href="#">Read more</a>
-                </div>
-                <div class="blog-post">
-                    <h3>Blog Post Title 2</h3>
-                    <p>Excerpt from the blog post. This is a placeholder for your blog content. Share insights, updates, and articles related to filmmaking and production.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </section>
     </main>
     <footer>
         <div class="social-icons">
@@ -240,5 +224,23 @@
         </div>
         <p>&copy; 2024 Marcel Perez. All rights reserved.</p>
     </footer>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('default');
+            });
+            document.getElementById(sectionId).classList.add('default');
+        }
+
+        window.addEventListener('load', () => {
+            const section = location.hash ? location.hash.substring(1) : 'about';
+            showSection(section);
+        });
+
+        window.addEventListener('hashchange', () => {
+            const section = location.hash.substring(1);
+            showSection(section);
+        });
+    </script>
 </body>
 </html>
