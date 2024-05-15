@@ -66,25 +66,38 @@
             flex: 1;
             padding-top: 15rem;
             padding-bottom: 2rem;
-        }
-        .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
             padding: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
         }
         .section {
             display: none;
         }
-        .section.active {
-            display: block;
+        .section.active .container {
+            opacity: 1;
+            transform: translateY(0);
         }
         h2 {
             color: #ff6f61;
             text-align: center;
+            margin-bottom: 1rem;
         }
         .portfolio-item, .blog-post {
             margin-bottom: 1.5rem;
+        }
+        .portfolio-item img, .blog-post img, .header-image, #about img {
+            width: 100%;
+            height: auto;
         }
         .headshot-container {
             width: 100%;
@@ -97,18 +110,19 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            border-radius: 50%;
         }
         .description {
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
         footer {
             background-color: #ff6f61;
             color: white;
             text-align: center;
             padding: 1rem 0;
-            position: relative;
+            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -213,6 +227,16 @@
             });
             document.getElementById(sectionId).classList.add('active');
         }
+
+        window.addEventListener('scroll', function() {
+            const containers = document.querySelectorAll('.container');
+            containers.forEach(container => {
+                const rect = container.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    container.parentElement.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
