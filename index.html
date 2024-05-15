@@ -64,10 +64,12 @@
             object-fit: cover;
         }
         .headshot {
-            max-width: 200px;
-            border-radius: 50%;
+            width: 100%;
+            max-width: 300px; /* Adjust as needed */
+            aspect-ratio: 4 / 3; /* 4:3 aspect ratio */
             display: block;
             margin: 1rem auto;
+            object-fit: cover;
         }
         footer {
             background-color: #ff6f61;
@@ -136,15 +138,4 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Marcel Perez. All rights reserved.</p>
-    </footer>
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
-</body>
-</html>
+        <p>&copy; 2024 Marcel Perez. All rights reserve
