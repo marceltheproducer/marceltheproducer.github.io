@@ -22,7 +22,10 @@
             color: white;
             text-align: center;
             padding: 5rem 1rem;
-            position: relative;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         header::before {
             content: '';
@@ -34,11 +37,7 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
-        header h1 {
-            position: relative;
-            z-index: 2;
-        }
-        header p {
+        header h1, header p {
             position: relative;
             z-index: 2;
         }
@@ -47,6 +46,10 @@
             justify-content: center;
             background-color: #ff6f61;
             padding: 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 10rem;
+            z-index: 1000;
         }
         nav a {
             color: white;
@@ -59,8 +62,12 @@
         nav a:hover {
             color: #ffecd1;
         }
-        .container {
+        main {
             flex: 1;
+            padding-top: 12rem;
+            padding-bottom: 2rem;
+        }
+        .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
@@ -68,6 +75,9 @@
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s, transform 0.6s;
+        }
+        .section {
+            display: none;
         }
         .section.active .container {
             opacity: 1;
@@ -143,51 +153,53 @@
         <p>Filmmaker and Producer</p>
     </header>
     <nav>
-        <a href="#" onclick="showSection('about')">About Me</a>
-        <a href="#" onclick="showSection('portfolio')">Portfolio</a>
-        <a href="#" onclick="showSection('blog')">Blog</a>
+        <a href="#about" onclick="showSection('about')">About Me</a>
+        <a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a>
+        <a href="#blog" onclick="showSection('blog')">Blog</a>
     </nav>
-    <div id="about" class="section active">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="headshot-container">
-                <img src="images/headshot.jpg" alt="Marcel Perez" class="headshot">
+    <main>
+        <section id="about" class="section active">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="headshot-container">
+                    <img src="images/headshot.jpg" alt="Marcel Perez" class="headshot">
+                </div>
+                <p class="description">
+                    Hello! I'm Marcel Perez, a filmmaker and producer with a passion for storytelling and bringing unique visions to life. With a background in mechanical engineering and a love for filmmaking, I've produced feature films that have been showcased at major festivals and secured distribution deals. I'm currently working on a new feature film and exploring animated projects. Welcome to my personal webpage!
+                </p>
             </div>
-            <p class="description">
-                Hello! I'm Marcel Perez, a filmmaker and producer with a passion for storytelling and bringing unique visions to life. With a background in mechanical engineering and a love for filmmaking, I've produced feature films that have been showcased at major festivals and secured distribution deals. I'm currently working on a new feature film and exploring animated projects. Welcome to my personal webpage!
-            </p>
-        </div>
-    </div>
-    <div id="portfolio" class="section">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-item">
-                <h3>Project Title 1</h3>
-                <p>Description of the project. This is a placeholder for your portfolio items. Include images and details about your work.</p>
+        </section>
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2>Portfolio</h2>
+                <div class="portfolio-item">
+                    <h3>Project Title 1</h3>
+                    <p>Description of the project. This is a placeholder for your portfolio items. Include images and details about your work.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Project Title 2</h3>
+                    <p>Description of the project. This is a placeholder for your portfolio items. Include images and details about your work.</p>
+                </div>
+                <!-- Add more portfolio items as needed -->
             </div>
-            <div class="portfolio-item">
-                <h3>Project Title 2</h3>
-                <p>Description of the project. This is a placeholder for your portfolio items. Include images and details about your work.</p>
+        </section>
+        <section id="blog" class="section">
+            <div class="container">
+                <h2>Blog</h2>
+                <div class="blog-post">
+                    <h3>Blog Post Title 1</h3>
+                    <p>Excerpt from the blog post. This is a placeholder for your blog content. Share insights, updates, and articles related to filmmaking and production.</p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Blog Post Title 2</h3>
+                    <p>Excerpt from the blog post. This is a placeholder for your blog content. Share insights, updates, and articles related to filmmaking and production.</p>
+                    <a href="#">Read more</a>
+                </div>
+                <!-- Add more blog posts as needed -->
             </div>
-            <!-- Add more portfolio items as needed -->
-        </div>
-    </div>
-    <div id="blog" class="section">
-        <div class="container">
-            <h2>Blog</h2>
-            <div class="blog-post">
-                <h3>Blog Post Title 1</h3>
-                <p>Excerpt from the blog post. This is a placeholder for your blog content. Share insights, updates, and articles related to filmmaking and production.</p>
-                <a href="#">Read more</a>
-            </div>
-            <div class="blog-post">
-                <h3>Blog Post Title 2</h3>
-                <p>Excerpt from the blog post. This is a placeholder for your blog content. Share insights, updates, and articles related to filmmaking and production.</p>
-                <a href="#">Read more</a>
-            </div>
-            <!-- Add more blog posts as needed -->
-        </div>
-    </div>
+        </section>
+    </main>
     <footer>
         <div class="social-icons">
             <a href="https://www.instagram.com/heymarcelperez/" target="_blank">
