@@ -72,16 +72,12 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s, transform 0.6s;
         }
         .section {
             display: none;
         }
-        .section.active .container {
-            opacity: 1;
-            transform: translateY(0);
+        .section.active {
+            display: block;
         }
         h2 {
             color: #ff6f61;
@@ -89,10 +85,6 @@
         }
         .portfolio-item, .blog-post {
             margin-bottom: 1.5rem;
-        }
-        .portfolio-item img, .blog-post img, .header-image, #about img {
-            width: 100%;
-            height: auto;
         }
         .headshot-container {
             width: 100%;
@@ -153,9 +145,9 @@
         <p>Filmmaker and Producer</p>
     </header>
     <nav>
-        <a href="#about" onclick="showSection('about')">About Me</a>
-        <a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a>
-        <a href="#blog" onclick="showSection('blog')">Blog</a>
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('portfolio')">Portfolio</a>
+        <a href="#" onclick="showSection('blog')">Blog</a>
     </nav>
     <main>
         <section id="about" class="section active">
@@ -221,16 +213,6 @@
             });
             document.getElementById(sectionId).classList.add('active');
         }
-
-        window.addEventListener('scroll', function() {
-            const containers = document.querySelectorAll('.container');
-            containers.forEach(container => {
-                const rect = container.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    container.parentElement.classList.add('active');
-                }
-            });
-        });
     </script>
 </body>
 </html>
