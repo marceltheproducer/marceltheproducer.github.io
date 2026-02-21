@@ -330,6 +330,15 @@
             margin-bottom: 1.4rem;
         }
         .about-text p:last-child { margin-bottom: 0; }
+        .about-photo {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            filter: grayscale(20%);
+            margin-bottom: 2rem;
+        }
         .about-text p strong { color: var(--white); font-weight: 500; }
         .about-text p em { color: #ccc; font-style: italic; }
 
@@ -617,6 +626,7 @@
     <div id="about" class="section-wrap">
         <div class="about-grid">
             <div class="about-left">
+                <img src="images/headshot.jpg" alt="Marcel Pérez" class="about-photo">
                 <p class="label">About</p>
                 <h2 class="section-title">Stories that demand<br>to be told.</h2>
                 <div class="rec-grid">
@@ -799,7 +809,7 @@
     <!-- FOOTER -->
     <footer>
         <span class="footer-name">Marcel Pérez</span>
-        <span class="footer-copy">&copy; 2026 Marcel Pérez. All rights reserved.</span>
+        <span class="footer-copy">&copy; 2026 Marcel Pérez. All rights reserved. &nbsp;🇨🇺🇵🇪</span>
     </footer>
 
     <script>
