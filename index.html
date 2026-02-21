@@ -607,8 +607,11 @@
             .filmography td:nth-child(2) { display: none; }
         }
         @media (max-width: 600px) {
-            nav, nav.scrolled { padding: 1rem 1.5rem; }
-            .nav-links { gap: 1.5rem; }
+            nav, nav.scrolled { padding: 1rem 1.25rem; }
+            .nav-logo { font-size: 1.05rem; }
+            .nav-links { gap: 1.1rem; }
+            .nav-links a { font-size: 0.65rem; letter-spacing: 0.1em; }
+            .nav-links .nav-press { display: none; }
             .section-wrap { padding: 4rem 1.5rem; }
             .rec-grid { grid-template-columns: 1fr; }
             /* Scrollable strip — each poster at proper portrait proportions */
@@ -636,7 +639,7 @@
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#works">Works</a></li>
-            <li><a href="#press">Press</a></li>
+            <li class="nav-press"><a href="#press">Press</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -714,7 +717,7 @@
     <div id="about" class="section-wrap">
         <div class="about-grid">
             <div class="about-left">
-                <img src="images/headshot.jpg" alt="Marcel Pérez" class="about-photo">
+                <img src="images/headshot.jpg" alt="Marcel Pérez" class="about-photo" loading="lazy">
                 <p class="label">About</p>
                 <h2 class="section-title">Stories that demand<br>to be told.</h2>
                 <div class="rec-grid">
