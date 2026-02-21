@@ -67,12 +67,13 @@
         {
           "@type": "Movie",
           "name": "The Way You Look Tonight",
+          "datePublished": "2019",
           "url": "https://www.amazon.com/Way-You-Look-Tonight/dp/B0842G37GF"
         },
         {
           "@type": "Movie",
           "name": "Piñata Prayers",
-          "datePublished": "2022",
+          "datePublished": "2025",
           "award": "BlackStar Pitch Winner 2022"
         },
         {
@@ -220,7 +221,7 @@
         .film-strip {
             display: flex;
             width: 100%;
-            height: clamp(260px, 36vh, 420px);
+            height: clamp(320px, 46vh, 520px);
             margin: 2.5rem 0;
             flex-shrink: 0;
         }
@@ -228,6 +229,9 @@
             flex: 1;
             overflow: hidden;
             border-right: 2px solid var(--bg);
+            position: relative;
+            text-decoration: none;
+            display: block;
         }
         .strip-item:last-child { border-right: none; }
         .strip-item img {
@@ -242,6 +246,36 @@
         .strip-item:hover img {
             transform: scale(1.05);
             filter: brightness(1);
+        }
+        .strip-item-info {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 2rem 0.75rem 0.7rem;
+            background: linear-gradient(to top, rgba(8,8,8,0.88) 0%, transparent 100%);
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+            pointer-events: none;
+        }
+        .strip-item:hover .strip-item-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .strip-info-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.88rem;
+            color: var(--white);
+            display: block;
+            line-height: 1.2;
+        }
+        .strip-info-meta {
+            font-size: 0.52rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-top: 0.2rem;
+            display: block;
         }
 
         .hero-bottom {
@@ -365,6 +399,16 @@
         }
 
         /* ── WORKS / FILMOGRAPHY ─────────────────────────────── */
+        .filmography-category {
+            font-size: 0.62rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 3rem;
+            padding-bottom: 0.75rem;
+        }
+        .filmography-category:first-of-type { margin-top: 0; }
+
         .filmography {
             width: 100%;
             border-collapse: collapse;
@@ -607,13 +651,55 @@
             </div>
         </div>
         <div class="film-strip">
-            <div class="strip-item"><img src="images/la-leyenda-negra.jpg" alt="La Leyenda Negra"></div>
-            <div class="strip-item"><img src="images/Pinata-Prayers-WEB-Hi_opt1.jpg" alt="Piñata Prayers"></div>
-            <div class="strip-item"><img src="images/mal-culo.jpg" alt="Mal Culo"></div>
-            <div class="strip-item"><img src="images/ines-unfortunately.jpg" alt="Ines Unfortunately"></div>
-            <div class="strip-item"><img src="images/the-way-you-look-tonight.jpg" alt="The Way You Look Tonight"></div>
-            <div class="strip-item"><img src="images/Good Girl Deep Focus Fest.jpg" alt="Good Girl"></div>
-            <div class="strip-item"><img src="images/diego on my mind getting paid in drinks-01.png" alt="Diego on My Mind"></div>
+            <a class="strip-item" href="https://watch.plex.tv/movie/la-leyenda-negra" target="_blank" rel="noopener noreferrer">
+                <img src="images/la-leyenda-negra.jpg" alt="La Leyenda Negra">
+                <div class="strip-item-info">
+                    <span class="strip-info-title">La Leyenda Negra</span>
+                    <span class="strip-info-meta">Feature · 2020</span>
+                </div>
+            </a>
+            <a class="strip-item" href="https://www.blackstarfest.org/news/press/11th-blackstar-film-festival-award-winners/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Pinata-Prayers-WEB-Hi_opt1.jpg" alt="Piñata Prayers">
+                <div class="strip-item-info">
+                    <span class="strip-info-title">Piñata Prayers</span>
+                    <span class="strip-info-meta">Short Doc · 2025</span>
+                </div>
+            </a>
+            <a class="strip-item" href="https://www.imdb.com/title/tt33932947/" target="_blank" rel="noopener noreferrer">
+                <img src="images/mal-culo.jpg" alt="Mal Culo">
+                <div class="strip-item-info">
+                    <span class="strip-info-title">Mal Culo</span>
+                    <span class="strip-info-meta">Short · 2024</span>
+                </div>
+            </a>
+            <a class="strip-item" href="https://www.imdb.com/title/tt27453715/" target="_blank" rel="noopener noreferrer">
+                <img src="images/ines-unfortunately.jpg" alt="Ines Unfortunately">
+                <div class="strip-item-info">
+                    <span class="strip-info-title">Ines Unfortunately</span>
+                    <span class="strip-info-meta">Short · 2022</span>
+                </div>
+            </a>
+            <a class="strip-item" href="https://www.amazon.com/Way-You-Look-Tonight/dp/B0842G37GF" target="_blank" rel="noopener noreferrer">
+                <img src="images/the-way-you-look-tonight.jpg" alt="The Way You Look Tonight">
+                <div class="strip-item-info">
+                    <span class="strip-info-title">The Way You Look Tonight</span>
+                    <span class="strip-info-meta">Feature · 2019</span>
+                </div>
+            </a>
+            <a class="strip-item" href="https://www.imdb.com/title/tt8906466/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Good Girl Deep Focus Fest.jpg" alt="Good Girl">
+                <div class="strip-item-info">
+                    <span class="strip-info-title">Good Girl</span>
+                    <span class="strip-info-meta">Short · 2019</span>
+                </div>
+            </a>
+            <a class="strip-item" href="https://www.amazon.com/Diego-My-Mind-Alicia-Herder/dp/B0G4SGYZNZ/" target="_blank" rel="noopener noreferrer">
+                <img src="images/diego on my mind getting paid in drinks-01.png" alt="Diego on My Mind">
+                <div class="strip-item-info">
+                    <span class="strip-info-title">Diego on My Mind</span>
+                    <span class="strip-info-meta">Short · 2017</span>
+                </div>
+            </a>
         </div>
         <div class="hero-bottom">
             <a href="#contact" class="hero-cta">Let's Create Something</a>
@@ -662,6 +748,7 @@
     <div id="works" class="section-wrap">
         <p class="label">Selected Works</p>
         <h2 class="section-title">Filmography</h2>
+        <p class="filmography-category">Features</p>
         <table class="filmography">
             <tr>
                 <td>
@@ -674,15 +761,19 @@
             <tr>
                 <td>
                     <span class="film-title">The Way You Look Tonight</span>
-                    <span class="film-meta">Feature Film</span>
+                    <span class="film-meta">Feature Film &nbsp;·&nbsp; 2019</span>
                 </td>
                 <td class="film-festivals">Gravitas Ventures &nbsp;·&nbsp; Cinequest Nominee &nbsp;·&nbsp; Atlanta FF Peach Award</td>
                 <td><a href="https://www.amazon.com/Way-You-Look-Tonight/dp/B0842G37GF" target="_blank" rel="noopener" class="film-link">Watch on Amazon ↗</a></td>
             </tr>
+        </table>
+
+        <p class="filmography-category">Short Films &amp; Docs</p>
+        <table class="filmography">
             <tr>
                 <td>
                     <span class="film-title">Piñata Prayers</span>
-                    <span class="film-meta">Short Documentary &nbsp;·&nbsp; 2022</span>
+                    <span class="film-meta">Short Documentary &nbsp;·&nbsp; 2025</span>
                 </td>
                 <td class="film-festivals">BlackStar Pitch Winner &nbsp;·&nbsp; Warner Bros. Discovery OneFifty</td>
                 <td><a href="https://www.blackstarfest.org/news/press/11th-blackstar-film-festival-award-winners/" target="_blank" rel="noopener" class="film-link">BlackStar Award ↗</a></td>
