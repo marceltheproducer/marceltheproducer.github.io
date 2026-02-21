@@ -501,7 +501,17 @@
             .nav-links { gap: 1.5rem; }
             .section-wrap { padding: 4rem 1.5rem; }
             .rec-grid { grid-template-columns: 1fr; }
-            .film-strip { height: 130px; margin: 1.75rem 0; }
+            /* Scrollable strip — each poster at proper portrait proportions */
+            .film-strip {
+                height: 195px;
+                margin: 1.5rem 0;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .film-strip::-webkit-scrollbar { display: none; }
+            .strip-item { flex: 0 0 130px; }
             .film-wall-name { font-size: clamp(2rem, 8vw, 3.5rem); }
             .hero-pills { flex-wrap: wrap; justify-content: center; }
             footer { padding: 1.5rem; flex-direction: column; text-align: center; }
