@@ -3,265 +3,654 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcel Perez - Filmmaker and Producer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Marcel Pérez — Film Producer | Los Angeles</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Marcel Pérez is a GLAAD Media and Spirit Award-nominated film producer based in Los Angeles. Sundance 2020 official selection. HBO Max. BlackStar Pitch Winner. Specializing in BIPOC, LGBTQIA+, and underrepresented stories.">
+    <meta name="keywords" content="Marcel Pérez, film producer, Los Angeles film producer, independent film producer, BIPOC filmmaker, LGBTQIA+ film, Sundance 2020, La Leyenda Negra, HBO Max, Spirit Award nominee, GLAAD Media Award, BlackStar Pitch Winner, Cuban Peruvian filmmaker, minority storytelling">
+    <meta name="author" content="Marcel Pérez">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://marceltheproducer.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marceltheproducer.github.io/">
+    <meta property="og:title" content="Marcel Pérez — Film Producer | Los Angeles">
+    <meta property="og:description" content="GLAAD Media and Spirit Award-nominated film producer. Sundance 2020 official selection. HBO Max. BlackStar Pitch Winner. Stories that demand to be told.">
+    <meta property="og:image" content="https://marceltheproducer.github.io/images/header.jpg">
+    <meta property="og:image:alt" content="Marcel Pérez — Film Producer">
+    <meta property="og:site_name" content="Marcel Pérez">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marcel Pérez — Film Producer | Los Angeles">
+    <meta name="twitter:description" content="GLAAD Media and Spirit Award-nominated film producer. Sundance 2020 official selection. HBO Max. BlackStar Pitch Winner.">
+    <meta name="twitter:image" content="https://marceltheproducer.github.io/images/header.jpg">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marcel Pérez",
+      "jobTitle": "Film Producer",
+      "description": "GLAAD Media and Spirit Award-nominated film producer based in Los Angeles, specializing in BIPOC, LGBTQIA+, and underrepresented storytelling.",
+      "url": "https://marceltheproducer.github.io/",
+      "image": "https://marceltheproducer.github.io/images/header.jpg",
+      "address": { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US" },
+      "sameAs": [
+        "https://www.instagram.com/heymarcelperez/",
+        "https://www.linkedin.com/in/marcelperezproducer/",
+        "https://www.imdb.com/name/nm6511032/"
+      ],
+      "knowsAbout": ["Film Production", "Independent Film", "Documentary Filmmaking", "LGBTQIA+ Cinema", "BIPOC Storytelling", "Feature Film Production"],
+      "award": ["GLAAD Media Award Nominee", "Film Independent Spirit Award Nominee", "BlackStar Pitch Winner 2022", "Sundance Film Festival Official Selection 2020"]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg:           #080808;
+            --bg-card:      #111111;
+            --border:       #1e1e1e;
+            --text:         #d4d4d4;
+            --muted:        #666;
+            --accent:       #c9a447;
+            --accent-dim:   rgba(201, 164, 71, 0.12);
+            --white:        #f5f5f5;
+        }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ─────────────────────────────────────────────── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.75rem 4rem;
+            transition: background 0.4s, padding 0.4s, border-color 0.4s;
+            border-bottom: 1px solid transparent;
+        }
+        nav.scrolled {
+            background: rgba(8, 8, 8, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 1.1rem 4rem;
+            border-bottom-color: var(--border);
+        }
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--white); }
+
+        /* ── HERO / FILM STRIP ────────────────────────────────── */
+        #hero {
+            height: 100vh;
+            min-height: 640px;
+            background: var(--bg);
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
         }
-        header {
-            background: url('images/header.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
+        .hero-top {
             text-align: center;
-            padding: 10rem 1rem;
-            position: relative;
-            width: 100%;
+            padding: 4rem 2rem 0;
+            flex-shrink: 0;
         }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .hero-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+        }
+        .film-wall-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(4rem, 8vw, 7.5rem);
+            font-weight: 300;
+            line-height: 0.95;
+            letter-spacing: 0.04em;
+            color: var(--white);
+            margin-bottom: 0;
+        }
+        .film-wall-divider {
+            width: 3rem;
+            height: 1px;
+            background: var(--accent);
+            margin: 1.25rem auto;
+            opacity: 0.7;
+        }
+        .film-wall-subtitle {
+            font-size: 0.78rem;
+            color: var(--muted);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Film strip — horizontal row of posters */
+        .film-strip {
+            display: flex;
+            width: 100%;
+            height: clamp(260px, 36vh, 420px);
+            margin: 2.5rem 0;
+            flex-shrink: 0;
+        }
+        .strip-item {
+            flex: 1;
+            overflow: hidden;
+            border-right: 2px solid var(--bg);
+        }
+        .strip-item:last-child { border-right: none; }
+        .strip-item img {
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-        header h1, header p {
-            position: relative;
-            z-index: 2;
-            margin: 0;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            font-size: 1.5rem;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #ff6f61;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.25rem;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffecd1;
-        }
-        main {
-            flex: 1;
-            padding: 2rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        section {
-            margin-bottom: 4rem;
-        }
-        h2 {
-            color: #ff6f61;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .about {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .about img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 1rem;
+            object-position: top center;
+            display: block;
+            filter: brightness(0.82);
+            transition: transform 0.6s ease, filter 0.4s ease;
         }
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .strip-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(1);
         }
-        .portfolio-item {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .portfolio-item img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-        .contact-form {
+
+        .hero-bottom {
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 1.25rem;
+            flex-shrink: 0;
+            padding-bottom: 1.5rem;
         }
-        .contact-form form {
-            width: 100%;
-            max-width: 600px;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .hero-cta {
+            display: inline-block;
+            padding: 0.85rem 2.5rem;
+            border: 1px solid rgba(201,164,71,0.55);
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
         }
-        .contact-form form input,
-        .contact-form form textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .hero-cta:hover {
+            background: var(--accent);
+            color: #080808;
+            border-color: var(--accent);
         }
-        .contact-form form button {
-            padding: 0.75rem 1.5rem;
-            background-color: #ff6f61;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .contact-form form button:hover {
-            background-color: #ff5733;
-        }
-        footer {
-            background-color: #ff6f61;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .social-icons {
+        .hero-pills {
             display: flex;
-            justify-content: center;
-            padding: 1rem 0;
+            flex-wrap: nowrap;
+            gap: 0.5rem;
         }
-        .social-icons a {
-            margin: 0 0.5rem;
-            color: white;
-            font-size: 24px;
+        .pill {
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border: 1px solid rgba(201,164,71,0.35);
+            color: var(--accent);
+            border-radius: 999px;
+        }
+
+        /* ── SHARED SECTION STYLES ───────────────────────────── */
+        .section-wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 7rem 4rem;
+            border-top: 1px solid var(--border);
+        }
+        .label {
+            font-size: 0.68rem;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.9rem;
+        }
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 3.6rem);
+            font-weight: 300;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 3.5rem;
+        }
+
+        /* ── ABOUT ───────────────────────────────────────────── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 7rem;
+            align-items: start;
+        }
+        .about-left .label { margin-bottom: 0.9rem; }
+        .about-left .section-title { margin-bottom: 2.5rem; }
+        .about-text p {
+            font-size: 1rem;
+            line-height: 1.95;
+            color: #aaa;
+            margin-bottom: 1.4rem;
+        }
+        .about-text p:last-child { margin-bottom: 0; }
+        .about-text p strong { color: var(--white); font-weight: 500; }
+        .about-text p em { color: #ccc; font-style: italic; }
+
+        .rec-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.6rem;
+        }
+        .rec-card {
+            padding: 1rem 1.25rem;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+        .rec-card .rec-sub {
+            font-size: 0.62rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.3rem;
+        }
+        .rec-card .rec-title {
+            font-size: 0.88rem;
+            color: var(--white);
+        }
+
+        /* ── WORKS / FILMOGRAPHY ─────────────────────────────── */
+        .filmography {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .filmography tr {
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        .filmography tr:first-child { border-top: 1px solid var(--border); }
+        .filmography tr:hover { background: rgba(255,255,255,0.02); }
+        .filmography td {
+            padding: 1.1rem 1rem 1.1rem 0;
+            vertical-align: middle;
+        }
+        .filmography td:last-child { text-align: right; padding-right: 0; }
+        .film-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--white);
+            display: block;
+        }
+        .film-meta {
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-top: 0.2rem;
+            display: block;
+        }
+        .film-festivals {
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .film-link {
+            font-size: 0.62rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: opacity 0.2s;
+        }
+        .film-link:hover { opacity: 0.65; }
+
+        /* ── CONTACT ─────────────────────────────────────────── */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 7rem;
+            align-items: start;
+        }
+        .contact-left p {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.85;
+            margin-bottom: 2.5rem;
+        }
+        .social-row {
+            display: flex;
+            gap: 1.75rem;
+        }
+        .social-row a {
+            color: var(--muted);
+            font-size: 1.15rem;
             transition: color 0.3s;
         }
-        .social-icons a:hover {
-            color: #ffecd1;
+        .social-row a:hover { color: var(--accent); }
+
+        form { display: flex; flex-direction: column; gap: 1.1rem; }
+        .field { display: flex; flex-direction: column; gap: 0.45rem; }
+        .field label {
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
         }
-        @media (max-width: 768px) {
-            header {
-                padding: 6rem 1rem;
-            }
-            nav a {
-                margin: 0 0.5rem;
-            }
+        .field input,
+        .field textarea {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--white);
+            padding: 0.9rem 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            outline: none;
+            transition: border-color 0.3s;
+            resize: vertical;
+            border-radius: 0;
+            appearance: none;
         }
-        @media (max-width: 480px) {
-            header {
-                padding: 4rem 1rem;
-            }
-            nav {
-                flex-direction: column;
-            }
-            nav a {
-                margin: 0.5rem 0;
-            }
+        .field input:focus,
+        .field textarea:focus { border-color: rgba(201,164,71,0.5); }
+        .field input::placeholder,
+        .field textarea::placeholder { color: #333; }
+
+        .btn-send {
+            align-self: flex-start;
+            padding: 0.9rem 2.75rem;
+            background: var(--accent);
+            color: #080808;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 500;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            border-radius: 0;
+        }
+        .btn-send:hover { opacity: 0.8; }
+
+        /* ── FOOTER ──────────────────────────────────────────── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            color: var(--muted);
+            letter-spacing: 0.04em;
+        }
+        .footer-copy {
+            font-size: 0.75rem;
+            color: #333;
+        }
+
+        /* ── RESPONSIVE ──────────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .about-grid { grid-template-columns: 260px 1fr; gap: 4rem; }
+        }
+        @media (max-width: 900px) {
+            nav, nav.scrolled { padding: 1.1rem 2rem; }
+            .section-wrap { padding: 5rem 2rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .contact-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+            footer { padding: 1.75rem 2rem; }
+            .film-strip { height: clamp(160px, 20vh, 240px); }
+            .filmography td:nth-child(2) { display: none; }
+        }
+        @media (max-width: 600px) {
+            nav, nav.scrolled { padding: 1rem 1.5rem; }
+            .nav-links { gap: 1.5rem; }
+            .section-wrap { padding: 4rem 1.5rem; }
+            .rec-grid { grid-template-columns: 1fr; }
+            .film-strip { height: 130px; margin: 1.75rem 0; }
+            .film-wall-name { font-size: clamp(2rem, 8vw, 3.5rem); }
+            .hero-pills { flex-wrap: wrap; justify-content: center; }
+            footer { padding: 1.5rem; flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Marcel Perez</h1>
-        <p>Filmmaker and Producer</p>
-    </header>
-    <nav>
-        <a href="#about" onclick="showSection('about')">About Me</a>
-        <a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a>
-        <a href="#contact" onclick="showSection('contact')">Contact</a>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a href="#hero" class="nav-logo">Marcel Pérez</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-    <main>
-        <section id="about" class="about section default">
-            <h2>About Me</h2>
-            <img src="images/headshot.jpg" alt="Marcel Perez">
-            <p>Marcel is a GLAAD Media and Spirit Award-nominated film producer from Miami, FL, and a 1st generation Cuban-Peruvian American. His work primarily focuses on representation and minority storytelling, putting women, BIPOC, and LGBTQIA folks at the forefront of media. His last feature ‘La Leyenda Negra’ was an Official Selection at the 2020 Sundance Film Festival, OutFest LA, BFI Flare, IndieLisboa, and Festival MIX Milano and previously streamed on HBO Max/HBO Latino. Other features include: ‘The Way You Look Tonight’ (distributed by Gravitas Ventures, Nominated for Best Feature at Cinequest Film Festival, Recipient of Peach Award at Atlanta Film Festival), and ‘I Before Thee’ (distributed by Bridgestone Multimedia). Marcel’s short documentary project, ‘Postcolonial Piñata’ won the 2022 BlackStar Pitch competition receiving an artist grant and support from Warner Bros Discovery’s OneFifty. In his spare time, Marcel enjoys brewing Cuban coffee, performing improv, and producing the comedy podcast Witch, Yes!</p>
-        </section>
-        <section id="portfolio" class="portfolio section">
-            <h2>Portfolio</h2>
-            <div class="portfolio-item">
-                <img src="images/project1.jpg" alt="Project 1">
-                <h3>Project Title 1</h3>
-                <p>Description of the project. This is a placeholder for your portfolio items. Include images and details about your work.</p>
+
+    <!-- HERO / FILM STRIP -->
+    <div id="hero">
+        <div class="hero-top">
+            <p class="hero-eyebrow">Los Angeles, CA</p>
+            <h1 class="film-wall-name">Marcel Pérez</h1>
+            <div class="film-wall-divider"></div>
+            <p class="film-wall-subtitle">Filmmaker &amp; Producer &nbsp;&middot;&nbsp; Sundance &nbsp;&middot;&nbsp; HBO Max</p>
+        </div>
+        <div class="film-strip">
+            <div class="strip-item"><img src="https://media.themoviedb.org/t/p/w300_and_h450_face/ovjfpdbIOn83IfqAS9Y8yUjKb1f.jpg" alt="La Leyenda Negra"></div>
+            <div class="strip-item"><img src="images/Pinata-Prayers-WEB-Hi_opt1.jpg" alt="Piñata Prayers"></div>
+            <div class="strip-item"><img src="https://a.ltrbxd.com/resized/film-poster/1/2/5/1/0/9/8/1251098-mal-culo-0-230-0-345-crop.jpg?v=75329e9624" alt="Mal Culo"></div>
+            <div class="strip-item"><img src="https://a.ltrbxd.com/resized/film-poster/1/0/3/0/3/3/5/1030335-ines-unfortunately-0-230-0-345-crop.jpg?v=026b1f6629" alt="Ines Unfortunately"></div>
+            <div class="strip-item"><img src="https://a.ltrbxd.com/resized/film-poster/5/2/0/4/7/0/520470-the-way-you-look-tonight-0-230-0-345-crop.jpg?v=282804447b" alt="The Way You Look Tonight"></div>
+            <div class="strip-item"><img src="images/Good Girl Deep Focus Fest.jpg" alt="Good Girl"></div>
+            <div class="strip-item"><img src="images/diego on my mind getting paid in drinks-01.png" alt="Diego on My Mind"></div>
+        </div>
+        <div class="hero-bottom">
+            <a href="#contact" class="hero-cta">Let's Create Something</a>
+            <div class="hero-pills">
+                <span class="pill">GLAAD Media Award Nominee</span>
+                <span class="pill">Spirit Award Nominee</span>
+                <span class="pill">Sundance 2020</span>
+                <span class="pill">BlackStar Pitch Winner</span>
+                <span class="pill">PGA Create Fellow 2025</span>
             </div>
-            <div class="portfolio-item">
-                <img src="images/project2.jpg" alt="Project 2">
-                <h3>Project Title 2</h3>
-                <p>Description of the project. This is a placeholder for your portfolio items. Include images and details about your work.</p>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="section-wrap">
+        <div class="about-grid">
+            <div class="about-left">
+                <p class="label">About</p>
+                <h2 class="section-title">Stories that demand<br>to be told.</h2>
+                <div class="rec-grid">
+                    <div class="rec-card">
+                        <p class="rec-sub">Nomination</p>
+                        <p class="rec-title">GLAAD Media Award</p>
+                    </div>
+                    <div class="rec-card">
+                        <p class="rec-sub">Nomination</p>
+                        <p class="rec-title">Film Independent Spirit Award</p>
+                    </div>
+                    <div class="rec-card">
+                        <p class="rec-sub">Official Selection</p>
+                        <p class="rec-title">Sundance Film Festival 2020</p>
+                    </div>
+                    <div class="rec-card">
+                        <p class="rec-sub">Grant · Warner Bros. Discovery</p>
+                        <p class="rec-title">BlackStar Pitch Winner 2022 — Piñata Prayers</p>
+                    </div>
+                    <div class="rec-card">
+                        <p class="rec-sub">Fellowship</p>
+                        <p class="rec-title">PGA Create Fellow 2025</p>
+                    </div>
+                </div>
             </div>
-            <!-- Add more portfolio items as needed -->
-        </section>
-        <section id="contact" class="contact section">
-            <h2>Contact</h2>
-            <div class="contact-form">
+            <div class="about-text">
+                <p>Marcel Pérez is a <strong>GLAAD Media</strong> and <strong>Spirit Award-nominated</strong> film producer based in Los Angeles — and a 1st generation Cuban-Peruvian American. His work centers representation and minority storytelling, putting women, BIPOC, and LGBTQIA+ voices at the forefront of media.</p>
+                <p>His feature <em>La Leyenda Negra</em> was an Official Selection at the <strong>2020 Sundance Film Festival</strong>, OutFest LA, BFI Flare, IndieLisboa, and Festival MIX Milano — and previously streamed on <strong>HBO Max / HBO Latino</strong>.</p>
+                <p>In 2022, Marcel won the prestigious <strong>BlackStar Pitch competition</strong>, receiving an artist grant and production support from Warner Bros. Discovery's OneFifty program for his short documentary <em>Piñata Prayers</em>.</p>
+                <p>In his spare time, Marcel enjoys brewing Cuban coffee, performing improv, and producing the comedy podcast <em>Witch, Yes!</em></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKS -->
+    <div id="works" class="section-wrap">
+        <p class="label">Selected Works</p>
+        <h2 class="section-title">Filmography</h2>
+        <table class="filmography">
+            <tr>
+                <td>
+                    <span class="film-title">La Leyenda Negra</span>
+                    <span class="film-meta">Feature Film &nbsp;·&nbsp; 2020</span>
+                </td>
+                <td class="film-festivals">Sundance 2020 &nbsp;·&nbsp; OutFest LA &nbsp;·&nbsp; BFI Flare &nbsp;·&nbsp; HBO Max</td>
+                <td><a href="https://watch.plex.tv/movie/la-leyenda-negra" target="_blank" rel="noopener" class="film-link">Watch Free on Plex ↗</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="film-title">The Way You Look Tonight</span>
+                    <span class="film-meta">Feature Film</span>
+                </td>
+                <td class="film-festivals">Gravitas Ventures &nbsp;·&nbsp; Cinequest Nominee &nbsp;·&nbsp; Atlanta FF Peach Award</td>
+                <td><a href="https://www.amazon.com/Way-You-Look-Tonight/dp/B0842G37GF" target="_blank" rel="noopener" class="film-link">Watch on Amazon ↗</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="film-title">Piñata Prayers</span>
+                    <span class="film-meta">Short Documentary &nbsp;·&nbsp; 2022</span>
+                </td>
+                <td class="film-festivals">BlackStar Pitch Winner &nbsp;·&nbsp; Warner Bros. Discovery OneFifty</td>
+                <td><a href="https://www.blackstarfest.org/news/press/11th-blackstar-film-festival-award-winners/" target="_blank" rel="noopener" class="film-link">BlackStar Award ↗</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="film-title">Mal Culo</span>
+                    <span class="film-meta">Short Film &nbsp;·&nbsp; 2024</span>
+                </td>
+                <td class="film-festivals">Austin Film Festival — World Premiere</td>
+                <td><a href="https://www.imdb.com/title/tt33932947/" target="_blank" rel="noopener" class="film-link">View on IMDb ↗</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="film-title">Ines Unfortunately</span>
+                    <span class="film-meta">Short Film &nbsp;·&nbsp; 2022</span>
+                </td>
+                <td class="film-festivals">Outfest LA &nbsp;·&nbsp; Tallgrass FF &nbsp;·&nbsp; Austin FF &nbsp;·&nbsp; NALIP</td>
+                <td><a href="https://www.imdb.com/title/tt27453715/" target="_blank" rel="noopener" class="film-link">View on IMDb ↗</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="film-title">Good Girl</span>
+                    <span class="film-meta">Short Film &nbsp;·&nbsp; 2019</span>
+                </td>
+                <td class="film-festivals">Indy Film Festival &nbsp;·&nbsp; Boulevard FF</td>
+                <td><a href="https://www.imdb.com/title/tt8906466/" target="_blank" rel="noopener" class="film-link">View on IMDb ↗</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="film-title">Diego on My Mind</span>
+                    <span class="film-meta">Short Film &nbsp;·&nbsp; 2017</span>
+                </td>
+                <td class="film-festivals">Available on Amazon Prime</td>
+                <td><a href="https://www.amazon.com/Diego-My-Mind-Alicia-Herder/dp/B0G4SGYZNZ/" target="_blank" rel="noopener" class="film-link">Watch on Amazon ↗</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section-wrap">
+        <div class="contact-grid">
+            <div class="contact-left">
+                <p class="label">Contact</p>
+                <h2 class="section-title">Let's make something together.</h2>
+                <p>Interested in collaborating or have a project in mind? Reach out — I'd love to hear from you.</p>
+                <div class="social-row">
+                    <a href="https://www.instagram.com/heymarcelperez/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcelperezproducer/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.imdb.com/name/nm6511032/" target="_blank" aria-label="IMDb">
+                        <i class="fab fa-imdb"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
                 <form action="https://formspree.io/f/xjvnzjzj" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="_replyto" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit">Send</button>
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="_replyto" placeholder="your@email.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send">Send Message</button>
                 </form>
             </div>
-        </section>
-    </main>
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/heymarcelperez/" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/marcelperezproducer/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.imdb.com/name/nm6511032/" target="_blank">
-                <i class="fab fa-imdb"></i>
-            </a>
         </div>
-        <p>&copy; 2024 Marcel Perez. All rights reserved.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <span class="footer-name">Marcel Pérez</span>
+        <span class="footer-copy">&copy; 2026 Marcel Pérez. All rights reserved.</span>
     </footer>
+
     <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('default');
-            });
-            document.getElementById(sectionId).classList.add('default');
-        }
-
-        window.addEventListener('load', () => {
-            const section = location.hash ? location.hash.substring(1) : 'about';
-            showSection(section);
-        });
-
-        window.addEventListener('hashchange', () => {
-            const section = location.hash.substring(1);
-            showSection(section);
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
         });
     </script>
+
 </body>
 </html>
