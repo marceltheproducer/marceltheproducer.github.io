@@ -270,8 +270,10 @@
         }
         .hero-pills {
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 0.5rem;
+            margin-top: 1.25rem;
         }
         .pill {
             font-size: 0.65rem;
@@ -281,6 +283,12 @@
             border: 1px solid rgba(201,164,71,0.35);
             color: var(--accent);
             border-radius: 999px;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        a.pill:hover {
+            background: rgba(201,164,71,0.1);
+            border-color: rgba(201,164,71,0.7);
         }
 
         /* ── SHARED SECTION STYLES ───────────────────────────── */
@@ -537,7 +545,14 @@
             <p class="hero-eyebrow">Los Angeles, CA</p>
             <h1 class="film-wall-name">Marcel Pérez</h1>
             <div class="film-wall-divider"></div>
-            <p class="film-wall-subtitle">Filmmaker &amp; Producer &nbsp;&middot;&nbsp; Sundance &nbsp;&middot;&nbsp; HBO Max</p>
+            <p class="film-wall-subtitle">Filmmaker &amp; Producer &nbsp;&middot;&nbsp; Sundance &nbsp;&middot;&nbsp; PGA Create Fellow</p>
+            <div class="hero-pills">
+                <a href="https://glaad.org/mediaawards/32/nominees/" target="_blank" rel="noopener noreferrer" class="pill">GLAAD Media Award Nominee</a>
+                <a href="https://www.filmindependent.org/press-releases/2021-film-independent-spirit-awards-nominations-announced/" target="_blank" rel="noopener noreferrer" class="pill">John Cassavetes Award Nominee</a>
+                <span class="pill">Sundance 2020</span>
+                <a href="https://www.blackstarfest.org/news/press/11th-blackstar-film-festival-award-winners/" target="_blank" rel="noopener noreferrer" class="pill">BlackStar Pitch Winner</a>
+                <a href="https://deadline.com/2025/10/pga-create-fellows-2025-unveiled-exclusive-1236596575/" target="_blank" rel="noopener noreferrer" class="pill">PGA Create Fellow 2025</a>
+            </div>
         </div>
         <div class="film-strip">
             <div class="strip-item"><img src="images/la-leyenda-negra.jpg" alt="La Leyenda Negra"></div>
@@ -550,13 +565,6 @@
         </div>
         <div class="hero-bottom">
             <a href="#contact" class="hero-cta">Let's Create Something</a>
-            <div class="hero-pills">
-                <span class="pill">GLAAD Media Award Nominee</span>
-                <span class="pill">Spirit Award Nominee</span>
-                <span class="pill">Sundance 2020</span>
-                <span class="pill">BlackStar Pitch Winner</span>
-                <span class="pill">PGA Create Fellow 2025</span>
-            </div>
         </div>
     </div>
 
