@@ -403,6 +403,50 @@
         }
         .film-link:hover { opacity: 0.65; }
 
+        /* ── PRESS ───────────────────────────────────────────── */
+        .press-item {
+            display: grid;
+            grid-template-columns: 130px 1fr auto auto;
+            align-items: center;
+            gap: 2rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .press-item:first-child { border-top: 1px solid var(--border); }
+        .press-item:hover { background: rgba(255,255,255,0.02); }
+        .press-outlet {
+            font-size: 0.6rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+        .press-headline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--white);
+            line-height: 1.3;
+        }
+        .press-year {
+            font-size: 0.72rem;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+        .press-arrow {
+            color: var(--accent);
+            font-size: 0.85rem;
+        }
+        @media (max-width: 900px) {
+            .press-item { grid-template-columns: 100px 1fr auto; }
+            .press-year { display: none; }
+        }
+        @media (max-width: 600px) {
+            .press-item { grid-template-columns: 1fr auto; gap: 1rem; }
+            .press-outlet { display: none; }
+        }
+
         /* ── CONTACT ─────────────────────────────────────────── */
         .contact-grid {
             display: grid;
@@ -535,6 +579,7 @@
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#works">Works</a></li>
+            <li><a href="#press">Press</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -667,6 +712,50 @@
                 <td><a href="https://www.amazon.com/Diego-My-Mind-Alicia-Herder/dp/B0G4SGYZNZ/" target="_blank" rel="noopener" class="film-link">Watch on Amazon ↗</a></td>
             </tr>
         </table>
+    </div>
+
+    <!-- PRESS -->
+    <div id="press" class="section-wrap">
+        <p class="label">Press</p>
+        <h2 class="section-title">In the news.</h2>
+        <div>
+            <a href="https://deadline.com/2020/11/la-leyenda-negra-hbo-premiere-date-trailer-1234612366/" target="_blank" rel="noopener noreferrer" class="press-item">
+                <span class="press-outlet">Deadline</span>
+                <span class="press-headline">Sundance Pic 'La Leyenda Negra' Lands at HBO, Gets Premiere Date on HBO Latino &amp; HBO Max</span>
+                <span class="press-year">2020</span>
+                <span class="press-arrow">↗</span>
+            </a>
+            <a href="https://www.hollywoodreporter.com/movies/movie-reviews/la-leyenda-negra-review-1273502/" target="_blank" rel="noopener noreferrer" class="press-item">
+                <span class="press-outlet">Hollywood Reporter</span>
+                <span class="press-headline">'La Leyenda Negra' Review — Sundance 2020</span>
+                <span class="press-year">2020</span>
+                <span class="press-arrow">↗</span>
+            </a>
+            <a href="https://deadline.com/2025/10/pga-create-fellows-2025-unveiled-exclusive-1236596575/" target="_blank" rel="noopener noreferrer" class="press-item">
+                <span class="press-outlet">Deadline</span>
+                <span class="press-headline">PGA Create Fellows for 2025 Unveiled (Exclusive)</span>
+                <span class="press-year">2025</span>
+                <span class="press-arrow">↗</span>
+            </a>
+            <a href="https://austinfilmfestival.com/blog/news/world-premiere-mal-culo/" target="_blank" rel="noopener noreferrer" class="press-item">
+                <span class="press-outlet">Austin Film Festival</span>
+                <span class="press-headline">World Premiere: 'Mal Culo'</span>
+                <span class="press-year">2024</span>
+                <span class="press-arrow">↗</span>
+            </a>
+            <a href="https://remezcla.com/film/la-leyenda-negra-explores-latinx-teens-struggle-immigration-status-first-love/" target="_blank" rel="noopener noreferrer" class="press-item">
+                <span class="press-outlet">Remezcla</span>
+                <span class="press-headline">'La Leyenda Negra' Explores a Latinx Teen's Struggle With Immigration Status &amp; First Love</span>
+                <span class="press-year">2020</span>
+                <span class="press-arrow">↗</span>
+            </a>
+            <a href="https://shoutoutmiami.com/meet-marcel-perez-creative-producer/" target="_blank" rel="noopener noreferrer" class="press-item">
+                <span class="press-outlet">ShoutOut Miami</span>
+                <span class="press-headline">Meet Marcel Pérez — Creative Producer</span>
+                <span class="press-year">2023</span>
+                <span class="press-arrow">↗</span>
+            </a>
+        </div>
     </div>
 
     <!-- CONTACT -->
