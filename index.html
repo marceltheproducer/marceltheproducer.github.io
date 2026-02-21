@@ -221,7 +221,7 @@
         .film-strip {
             display: flex;
             width: 100%;
-            height: clamp(320px, 46vh, 520px);
+            height: clamp(270px, 34vh, 490px);
             margin: 2.5rem 0;
             flex-shrink: 0;
         }
@@ -238,7 +238,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top center;
+            object-position: center center;
             display: block;
             filter: brightness(0.82);
             transition: transform 0.6s ease, filter 0.4s ease;
@@ -247,6 +247,10 @@
             transform: scale(1.05);
             filter: brightness(1);
         }
+        .strip-item--zoomed img { transform: scale(1.05); }
+        .strip-item--zoomed:hover img { transform: scale(1.1); }
+        .strip-item--zoomed-lg img { transform: scale(1.05); }
+        .strip-item--zoomed-lg:hover img { transform: scale(1.1); }
         .strip-item-info {
             position: absolute;
             bottom: 0; left: 0; right: 0;
@@ -658,8 +662,8 @@
                     <span class="strip-info-meta">Feature · 2020</span>
                 </div>
             </a>
-            <a class="strip-item" href="https://www.blackstarfest.org/news/press/11th-blackstar-film-festival-award-winners/" target="_blank" rel="noopener noreferrer">
-                <img src="images/Pinata-Prayers-WEB-Hi_opt1.jpg" alt="Piñata Prayers">
+            <a class="strip-item strip-item--zoomed" href="https://www.blackstarfest.org/news/press/11th-blackstar-film-festival-award-winners/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Pinata-Prayers-WEB-Hi_opt1.jpg" alt="Piñata Prayers" style="object-position: center top;">
                 <div class="strip-item-info">
                     <span class="strip-info-title">Piñata Prayers</span>
                     <span class="strip-info-meta">Short Doc · 2025</span>
@@ -673,14 +677,14 @@
                 </div>
             </a>
             <a class="strip-item" href="https://www.imdb.com/title/tt27453715/" target="_blank" rel="noopener noreferrer">
-                <img src="images/ines-unfortunately.jpg" alt="Ines Unfortunately">
+                <img src="images/ines-unfortunately.jpg" alt="Ines Unfortunately" style="object-position: center top;">
                 <div class="strip-item-info">
                     <span class="strip-info-title">Ines Unfortunately</span>
                     <span class="strip-info-meta">Short · 2022</span>
                 </div>
             </a>
             <a class="strip-item" href="https://www.amazon.com/Way-You-Look-Tonight/dp/B0842G37GF" target="_blank" rel="noopener noreferrer">
-                <img src="images/the-way-you-look-tonight.jpg" alt="The Way You Look Tonight">
+                <img src="images/the-way-you-look-tonight.jpg" alt="The Way You Look Tonight" style="object-position: center top;">
                 <div class="strip-item-info">
                     <span class="strip-info-title">The Way You Look Tonight</span>
                     <span class="strip-info-meta">Feature · 2019</span>
@@ -693,8 +697,8 @@
                     <span class="strip-info-meta">Short · 2019</span>
                 </div>
             </a>
-            <a class="strip-item" href="https://www.amazon.com/Diego-My-Mind-Alicia-Herder/dp/B0G4SGYZNZ/" target="_blank" rel="noopener noreferrer">
-                <img src="images/diego on my mind getting paid in drinks-01.png" alt="Diego on My Mind">
+            <a class="strip-item strip-item--zoomed-lg" href="https://www.amazon.com/Diego-My-Mind-Alicia-Herder/dp/B0G4SGYZNZ/" target="_blank" rel="noopener noreferrer">
+                <img src="images/diego on my mind getting paid in drinks-01.png" alt="Diego on My Mind" style="object-position: center top;">
                 <div class="strip-item-info">
                     <span class="strip-info-title">Diego on My Mind</span>
                     <span class="strip-info-meta">Short · 2017</span>
