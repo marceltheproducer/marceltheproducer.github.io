@@ -418,16 +418,29 @@
             border: 1px solid var(--border);
             background: var(--bg-card);
         }
-        .rec-card .rec-sub {
+        .rec-sub {
             font-size: 0.62rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
             color: var(--accent);
             margin-bottom: 0.3rem;
         }
-        .rec-card .rec-title {
+        .rec-title {
             font-size: 0.88rem;
             color: var(--white);
+        }
+        .in-dev-logline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.65;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border);
+        }
+        .strip-hint {
+            display: none;
         }
 
         /* ── WORKS / FILMOGRAPHY ─────────────────────────────── */
@@ -643,6 +656,7 @@
             }
             .film-strip::-webkit-scrollbar { display: none; }
             .strip-item { flex: 0 0 150px; }
+            .strip-hint { display: block; font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-align: center; margin-top: 0.4rem; opacity: 0.5; }
             .filmography td:nth-child(2) { display: none; }
         }
         @media (max-width: 600px) {
@@ -752,6 +766,7 @@
                 </div>
             </a>
         </div>
+        <p class="strip-hint">Swipe to explore</p>
         <div class="hero-bottom">
             <a href="#contact" class="hero-cta">Let's Create Something</a>
         </div>
@@ -776,6 +791,7 @@
                 <p class="rec-sub">In Development</p>
                 <p class="rec-title" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;">The Girl who Cried Wolf</p>
                 <p class="in-dev-seek">Seeking co-producers</p>
+                <p class="in-dev-logline">Convinced her alcoholic mother is turning into a werewolf, 6-year-old Bee races to find a "cure" before the full moon — blurring fantasy and reality in a desperate bid to save her.</p>
             </div>
             <ul class="in-dev-accolades">
                 <li>PGA Create Fellow 2025</li>
