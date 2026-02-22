@@ -359,8 +359,6 @@
             gap: 7rem;
             align-items: start;
         }
-        .about-left .label { margin-bottom: 0.9rem; }
-        .about-left .section-title { margin-bottom: 2.5rem; }
         .about-text p {
             font-size: 1rem;
             line-height: 1.95;
@@ -380,10 +378,40 @@
         .about-text p strong { color: var(--white); font-weight: 500; }
         .about-text p em { color: #ccc; font-style: italic; }
 
-        .rec-grid {
+.in-dev-card {
+            margin-top: 2.5rem;
+            padding: 1.5rem 1.75rem;
+            border: 1px solid var(--border);
+            border-left: 2px solid var(--accent);
+            background: var(--bg-card);
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 0.6rem;
+            grid-template-columns: 260px 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        .in-dev-seek {
+            font-size: 0.6rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            opacity: 0.7;
+            margin-top: 0.4rem;
+        }
+        .in-dev-accolades {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            align-content: center;
+        }
+        .in-dev-accolades li {
+            font-size: 0.58rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            padding: 0.3rem 0.65rem;
+            border: 1px solid var(--border);
+            line-height: 1;
         }
         .rec-card {
             padding: 1rem 1.25rem;
@@ -613,7 +641,7 @@
             .nav-links a { font-size: 0.65rem; letter-spacing: 0.1em; }
             .nav-links .nav-press { display: none; }
             .section-wrap { padding: 4rem 1.5rem; }
-            .rec-grid { grid-template-columns: 1fr; }
+            .in-dev-card { grid-template-columns: 1fr; gap: 1.25rem; }
             /* Scrollable strip — each poster at proper portrait proportions */
             .film-strip {
                 height: 195px;
@@ -715,39 +743,32 @@
 
     <!-- ABOUT -->
     <div id="about" class="section-wrap">
+        <p class="label">About</p>
+        <h2 class="section-title">Stories that demand<br>to be told.</h2>
         <div class="about-grid">
             <div class="about-left">
                 <img src="images/headshot.jpg" alt="Marcel Pérez" class="about-photo" loading="lazy">
-                <p class="label">About</p>
-                <h2 class="section-title">Stories that demand<br>to be told.</h2>
-                <div class="rec-grid">
-                    <div class="rec-card">
-                        <p class="rec-sub">Nomination</p>
-                        <p class="rec-title">GLAAD Media Award</p>
-                    </div>
-                    <div class="rec-card">
-                        <p class="rec-sub">Nomination</p>
-                        <p class="rec-title">Film Independent Spirit Award</p>
-                    </div>
-                    <div class="rec-card">
-                        <p class="rec-sub">Official Selection</p>
-                        <p class="rec-title">Sundance Film Festival 2020</p>
-                    </div>
-                    <div class="rec-card">
-                        <p class="rec-sub">Grant · Warner Bros. Discovery</p>
-                        <p class="rec-title">BlackStar Pitch Winner 2022 — Piñata Prayers</p>
-                    </div>
-                    <div class="rec-card">
-                        <p class="rec-sub">Fellowship</p>
-                        <p class="rec-title">PGA Create Fellow 2025</p>
-                    </div>
-                </div>
             </div>
             <div class="about-text">
                 <p>Marcel Pérez grew up in Miami, which means he came of age loud, sweaty, and surrounded by people who treat coffee like a love language. He's a 1st generation Cuban-Peruvian American and a film producer based in Los Angeles — and he's spent his career proving that stories from the margins can also be epic, strange, funny, and a little monstrous.</p>
                 <p>His feature <em>La Leyenda Negra</em> premiered at <strong>Sundance 2020</strong> and found distribution through <strong>HBO Max</strong> and HBO Latino, earning nominations for the <strong>John Cassavetes Spirit Award</strong> and the <strong>GLAAD Media Award</strong>. He's produced three features total, won the <strong>BlackStar Pitch</strong> grant from WarnerMedia OneFifty, received a <strong>NALIP grant</strong> for short film work, and in 2025 was selected as a <strong>PGA Create Fellow</strong> for his feature in development, <em>The Girl who Cried Wolf</em>.</p>
                 <p>Before film, he studied mechanical engineering and robotics. He performs improv at UCB, produces the comedy podcast <em>Witch, Yes!</em> (<a href="https://podcasts.apple.com/us/podcast/witch-yes/id1440692608" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Apple</a> · <a href="https://open.spotify.com/show/1kWQXQEAkBUhLRFpvqP0EJ" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Spotify</a>), and will always make you a cafecito.</p>
             </div>
+        </div>
+        <div class="in-dev-card">
+            <div>
+                <p class="rec-sub">In Development</p>
+                <p class="rec-title" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;">The Girl who Cried Wolf</p>
+                <p class="in-dev-seek">Seeking co-producers</p>
+            </div>
+            <ul class="in-dev-accolades">
+                <li>PGA Create Fellow 2025</li>
+                <li>Nashville FF 2025 — Pitch Finalist</li>
+                <li>Nashville FF 2025 — Screenplay Finalist</li>
+                <li>Tony Cox Screenplay — Quarterfinalist</li>
+                <li>Austin FF 2024 — Script Semifinalist</li>
+                <li>Micro Grants 2024 — Finalist</li>
+            </ul>
         </div>
     </div>
 
