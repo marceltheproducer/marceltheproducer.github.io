@@ -634,7 +634,15 @@
             .about-grid { grid-template-columns: 1fr; gap: 3rem; }
             .contact-grid { grid-template-columns: 1fr; gap: 3.5rem; }
             footer { padding: 1.75rem 2rem; }
-            .film-strip { height: clamp(160px, 20vh, 240px); }
+            .film-strip {
+                height: 220px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .film-strip::-webkit-scrollbar { display: none; }
+            .strip-item { flex: 0 0 150px; }
             .filmography td:nth-child(2) { display: none; }
         }
         @media (max-width: 600px) {
