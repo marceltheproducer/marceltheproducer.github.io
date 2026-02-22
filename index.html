@@ -403,19 +403,27 @@
             list-style: none;
             display: flex;
             flex-wrap: wrap;
-            gap: 0.45rem;
+            align-items: center;
+            gap: 0;
             border-top: 1px solid var(--border);
             padding-top: 0.9rem;
         }
         .in-dev-accolades li {
-            flex: 1 1 calc(33% - 0.45rem);
-            text-align: center;
             font-size: 0.58rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--muted);
-            padding: 0.2rem 0;
             line-height: 1;
+            white-space: nowrap;
+        }
+        .in-dev-accolades li::after {
+            content: '·';
+            margin: 0 0.65rem;
+            color: var(--accent);
+            opacity: 0.45;
+        }
+        .in-dev-accolades li:last-child::after {
+            content: none;
         }
         .rec-card {
             padding: 1rem 1.25rem;
